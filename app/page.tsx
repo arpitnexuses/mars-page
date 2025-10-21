@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
 import { LogoCarousel } from "@/components/logo-carousel"
 import { JobsShowcaseSection } from "@/components/jobs-showcase-section"
+import { VideoSection } from "@/components/video-section"
 import { TrustedBySection } from "@/components/trusted-by-section"
 import { ElevateCareerSection } from "@/components/elevate-career-section"
 import { TalentSpotlightSection } from "@/components/talent-spotlight-section"
@@ -19,6 +20,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <LogoCarousel />
+      <VideoSection />
       <JobsShowcaseSection />
       <TrustedBySection />
       <ElevateCareerSection />

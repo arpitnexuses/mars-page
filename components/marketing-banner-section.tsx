@@ -3,79 +3,94 @@ import { Star } from "lucide-react"
 
 export function MarketingBannerSection() {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+    <section className="py-20" style={{ backgroundColor: "#f8f5f5" }}>
+      <div className="container mx-auto pr-2 pl-4 sm:pr-4 sm:pl-8 md:pl-12 lg:pl-16">
+        <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
           {/* Left Content */}
           <div className="flex-1 max-w-xl">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Align with MARS Returnship for ESG Excellence:
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-4 sm:mb-6 leading-tight" style={{ fontFamily: "Inter, sans-serif" }}>
+              Align with MARS   
+              <br />
+              Returnship for ESG 
+              <br />
+              Excellence:
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Joining forces with MARS Returnship not only enhances your talent acquisition strategy but also aligns
-              with your ESG objectives.
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              Joining forces with MARS Returnship not only enhances
+              <br />
+              your talent acquisition strategy but also aligns with your 
+              <br />
+              ESG objectives.
             </p>
           </div>
 
           {/* Right Image with Floating Cards */}
-          <div className="flex-1 relative">
-            <div className="relative w-full max-w-lg mx-auto">
+          <div className="flex-1 max-w-xl relative">
+            <div className="relative w-full mx-auto">
               {/* Main Woman Image */}
               <Image
                 src="/images/marketing-woman.png"
                 alt="Professional woman"
-                width={450}
-                height={520}
-                className="relative z-10"
+                width={310}
+                height={310}
+                className="relative z-10 ml-[15px] sm:ml-[25px] lg:ml-[35px] transition-all duration-300 hover:scale-105 hover:brightness-110"
               />
 
               {/* APPLE Job Card - Top Right */}
-              <div className="absolute top-8 right-0 bg-white rounded-lg shadow-lg p-4 w-64 z-20">
+              <div className="absolute top-3 sm:top-6 right-[25px] sm:right-[50px] bg-white rounded-lg shadow-lg p-3 sm:p-4 w-48 sm:w-56 z-20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#B3262F]/10">
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <h3 className="font-bold text-gray-900 text-lg">APPLE</h3>
-                    <p className="text-sm text-gray-500">Data Analyst</p>
+                    <h3 className="text-lg sm:text-2xl font-bold text-gray-900">APPLE</h3>
+                    <p className="text-xs sm:text-sm text-gray-500">Data Analyst</p>
                   </div>
                   <div className="flex items-center gap-1">
                     <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                     <span className="text-sm font-medium text-gray-700">(5.0)</span>
                   </div>
                 </div>
-                <button className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 px-4 rounded-lg transition-colors">
+                <button className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 sm:py-2.5 px-3 sm:px-4 rounded-lg transition-colors text-xs sm:text-sm">
                   APPLY NOW
                 </button>
               </div>
 
-              {/* Candidate Card - Bottom Left */}
-              <div className="absolute bottom-12 left-0 bg-white rounded-lg shadow-lg p-4 w-72 z-20">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-semibold text-gray-900">Candidate #1</h3>
-                  <label className="relative inline-flex items-center cursor-pointer">
-                    <input type="checkbox" className="sr-only peer" defaultChecked />
-                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500"></div>
-                  </label>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4 mb-3">
-                  <div>
-                    <p className="text-xs text-gray-500 mb-1">Test Score</p>
-                    <p className="text-2xl font-bold text-green-600">94%</p>
-                    <p className="text-xs text-gray-500">Experience: 3+ years</p>
+              {/* Candidate Card - Bottom Left (refined to match design) */}
+              <div className="absolute bottom-3 sm:bottom-6 left-2 sm:left-[-120px] lg:left-[-190px] z-20 w-[250px] sm:w-[280px] lg:w-[323px] rounded-[12px] bg-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#B3262F]/10" >
+                <div className="p-2 pb-1">
+                  {/* Header row */}
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-[16px] leading-5 font-semibold text-[#1f2937]">Candidate #1</h3>
+                    {/* small toggle */}
+                    <label className="relative inline-flex h-5 w-10 cursor-pointer items-center">
+                      <input type="checkbox" className="peer sr-only" defaultChecked />
+                      <span className="absolute inset-0 rounded-full bg-gray-200 transition-colors peer-checked:bg-emerald-500" />
+                      <span className="absolute left-0.5 top-0.5 h-4 w-4 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5" />
+                    </label>
                   </div>
-                  <div>
-                    <p className="text-xs text-gray-500 mb-1">Video</p>
-                    <div className="w-12 h-12 bg-gray-100 rounded flex items-center justify-center">
-                      <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-gray-400 border-b-[6px] border-b-transparent ml-1"></div>
+                </div>
+                {/* Divider */}
+                <div className="h-px w-full bg-gray-200" />
+                <div className="p-2 pt-1">
+                  {/* Middle metrics row */}
+                  <div className="grid grid-cols-3 gap-4 mb-1">
+                    <div>
+                      <p className="text-[10px] text-gray-500 mb-1">Test Score</p>
+                      <p className="text-[22px] leading-6 font-bold text-emerald-600">94%</p>
+                      <p className="text-[10px] text-gray-500">Experience: 3+ years</p>
                     </div>
-                  </div>
-                </div>
-
-                <div>
-                  <p className="text-xs text-gray-500 mb-1">Test Score</p>
-                  <div className="flex gap-1">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
+                    <div className="flex flex-col items-start">
+                      <p className="text-[10px] text-gray-500 mb-1">Video</p>
+                      <div className="flex h-10 w-10 items-center justify-center rounded bg-gray-100">
+                        <div className="ml-0.5 h-0 w-0 border-b-[6px] border-l-[10px] border-t-[6px] border-b-transparent border-t-transparent border-l-gray-400" />
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-start">
+                      <p className="text-[10px] text-gray-500 mb-1">Test Score</p>
+                      <div className="flex gap-1">
+                        {[1,2,3,4,5].map((s)=> (
+                          <Star key={s} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -1,143 +1,155 @@
+"use client"
+
 import Image from "next/image"
+import { useState } from "react"
 
 export function SplitLayoutSection() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    positions: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', company: '', positions: '' })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <div className="container mx-auto pr-2 pl-4 sm:pr-4 sm:pl-8 md:pl-12 lg:pl-16">
+        <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
           {/* Left Side - Form */}
           <div className="w-full lg:w-1/2">
             <div className="max-w-md">
               {/* Label */}
-              <p className="text-red-600 font-semibold text-sm tracking-wider mb-4">CUSTOM, SCALABLE, TECH-ENABLED</p>
+              <p className="font-black text-lg sm:text-xl tracking-wider mb-1" style={{ color: "#B3262F" }}>CUSTOM, SCALABLE, TECH-ENABLED</p>
 
               {/* Heading */}
-              <h2 className="text-4xl lg:text-5xl font-normal mb-8 leading-tight">
-                Hire skilled nursing and allied health <span className="text-gray-600">professionals</span> on demand.
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-6 sm:mb-8 leading-tight" style={{ fontFamily: "Inter, sans-serif" }}>
+                <span className="font-bold">Hire skilled nursing and allied health</span> <span>professionals</span> on demand.
               </h2>
 
               {/* Form */}
-              <form className="space-y-4 mb-6">
+              <form className="space-y-4 mb-6" onSubmit={handleSubmit}>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Name"
-                  className="w-full px-4 py-3 bg-gray-100 border-0 rounded text-sm focus:outline-none focus:ring-2 focus:ring-red-600"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-100 border-0 rounded text-xs sm:text-sm focus:outline-none focus:ring-2"
+                  style={{ "--tw-ring-color": "#B3262F" } as React.CSSProperties}
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email address"
-                  className="w-full px-4 py-3 bg-gray-100 border-0 rounded text-sm focus:outline-none focus:ring-2 focus:ring-red-600"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-100 border-0 rounded text-xs sm:text-sm focus:outline-none focus:ring-2"
+                  style={{ "--tw-ring-color": "#B3262F" } as React.CSSProperties}
                 />
                 <input
                   type="text"
+                  name="company"
                   placeholder="Company Name"
-                  className="w-full px-4 py-3 bg-gray-100 border-0 rounded text-sm focus:outline-none focus:ring-2 focus:ring-red-600"
+                  value={formData.company}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-100 border-0 rounded text-xs sm:text-sm focus:outline-none focus:ring-2"
+                  style={{ "--tw-ring-color": "#B3262F" } as React.CSSProperties}
                 />
                 <input
                   type="text"
+                  name="positions"
                   placeholder="What positions are you looking for?"
-                  className="w-full px-4 py-3 bg-gray-100 border-0 rounded text-sm focus:outline-none focus:ring-2 focus:ring-red-600"
+                  value={formData.positions}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-100 border-0 rounded text-xs sm:text-sm focus:outline-none focus:ring-2"
+                  style={{ "--tw-ring-color": "#B3262F" } as React.CSSProperties}
                 />
                 <button
                   type="submit"
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full text-white font-semibold py-2.5 sm:py-3 px-4 sm:px-6 rounded transition-all duration-300 hover:scale-105 hover:shadow-lg text-xs sm:text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                  style={{ backgroundColor: "#B3262F" }}
+                  onMouseEnter={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = "#9A1F28")}
+                  onMouseLeave={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = "#B3262F")}
                 >
-                  REQUEST A CALL BACK
+                  {isSubmitting ? 'SENDING...' : 'REQUEST A CALL BACK'}
                 </button>
               </form>
 
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="mb-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded text-xs sm:text-sm">
+                  ✅ Thank you! Your message has been sent successfully. We'll get back to you soon.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded text-xs sm:text-sm">
+                  ❌ Sorry, there was an error sending your message. Please try again.
+                </div>
+              )}
+
               {/* Footer Text */}
-              <p className="text-sm text-gray-600">
+              <p className="text-xs sm:text-sm text-gray-600">
                 Know someone who&apos;s looking for a job?{" "}
-                <a href="#" className="text-black font-semibold underline hover:text-red-600">
+                <a href="#" className="text-black font-semibold underline" style={{ "--hover-color": "#B3262F" } as React.CSSProperties}>
                   Refer here
                 </a>
               </p>
             </div>
           </div>
 
-          {/* Right Side - Image with Cards */}
+          {/* Right Side - Single illustrative image */}
           <div className="w-full lg:w-1/2 relative">
-            <div className="relative h-[500px] lg:h-[600px]">
-              {/* Red Geometric Shapes */}
-              <div className="absolute top-16 right-0 w-64 h-64 bg-red-600 rounded-tl-[100px]" />
-              <div className="absolute bottom-0 right-32 w-48 h-48 bg-red-600 rounded-tr-[80px]" />
-
-              {/* Woman Image */}
-              <div className="relative z-10 h-full flex items-center justify-center">
-                <Image
-                  src="/images/professional-woman.png"
-                  alt="Professional woman"
-                  width={400}
-                  height={600}
-                  className="object-contain"
-                />
-              </div>
-
-              {/* Floating Profile Cards */}
-              <div className="absolute left-0 bottom-32 z-20 bg-white rounded-lg shadow-lg p-4 w-64">
-                <div className="space-y-3">
-                  {/* Card 1 */}
-                  <div className="flex items-center gap-3 pb-3 border-b">
-                    <div className="w-10 h-10 rounded-full bg-gray-200 overflow-hidden flex-shrink-0">
-                      <Image
-                        src="/placeholder.svg?height=40&width=40"
-                        alt="Johnny Hamilton"
-                        width={40}
-                        height={40}
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-semibold text-sm text-black">Johnny Hamilton</p>
-                      <p className="text-xs text-gray-600">Highway manager</p>
-                    </div>
-                    <button className="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-1 rounded whitespace-nowrap">
-                      HIRE NOW
-                    </button>
-                  </div>
-
-                  {/* Card 2 */}
-                  <div className="flex items-center gap-3 pb-3 border-b">
-                    <div className="w-10 h-10 rounded-full bg-gray-200 overflow-hidden flex-shrink-0">
-                      <Image
-                        src="/placeholder.svg?height=40&width=40"
-                        alt="Emily Klein"
-                        width={40}
-                        height={40}
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-semibold text-sm text-black">Emily Klein</p>
-                      <p className="text-xs text-gray-600">Systems Analyst</p>
-                    </div>
-                    <button className="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-1 rounded whitespace-nowrap">
-                      HIRE NOW
-                    </button>
-                  </div>
-
-                  {/* Card 3 */}
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gray-200 overflow-hidden flex-shrink-0">
-                      <Image
-                        src="/placeholder.svg?height=40&width=40"
-                        alt="Augusto Pena"
-                        width={40}
-                        height={40}
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-semibold text-sm text-black">Augusto Pena</p>
-                      <p className="text-xs text-gray-600">Drip Specialist</p>
-                    </div>
-                    <button className="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-1 rounded whitespace-nowrap">
-                      HIRE NOW
-                    </button>
-                  </div>
-                </div>
-              </div>
+            <div className="relative h-[300px] sm:h-[400px] lg:h-[600px] group">
+              <Image
+                src="/images/split-layout.png"
+                alt="Hiring illustration"
+                fill
+                sizes="(max-width: 1024px) 90vw, 600px"
+                className="object-contain transition-all duration-300 group-hover:scale-105 group-hover:brightness-110"
+                priority
+              />
             </div>
           </div>
         </div>
