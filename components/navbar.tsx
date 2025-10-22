@@ -18,9 +18,9 @@ export function Navbar() {
           <Image
             src="/mars-logo.png"
             alt="MARS Solutions Group"
-            width={120}
-            height={48}
-            className="h-auto w-28 transition-all duration-300 group-hover:scale-105 group-hover:brightness-110 group-hover:drop-shadow-md"
+            width={130}
+            height={52}
+            className="h-auto w-30 transition-all duration-300 group-hover:scale-105 group-hover:brightness-110 group-hover:drop-shadow-md"
           />
         </Link>
 
@@ -35,7 +35,7 @@ export function Navbar() {
             <Link href="/volunteer" className="text-base font-medium text-gray-700 transition-all duration-300 hover:text-[#B3262F] hover:scale-105">
               Volunteer
             </Link>
-            <Link href="/about" className="text-base font-medium text-gray-700 transition-all duration-300 hover:text-[#B3262F] hover:scale-105">
+            <Link href="https://marssg.com/about-2/" target="_blank" rel="noopener noreferrer" className="text-base font-medium text-gray-700 transition-all duration-300 hover:text-[#B3262F] hover:scale-105">
               About us
             </Link>
           </div>
@@ -91,7 +91,9 @@ export function Navbar() {
               Volunteer
             </Link>
             <Link 
-              href="/about" 
+              href="https://marssg.com/about-2/" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="block text-base font-medium text-gray-700 transition-all duration-300 hover:text-[#B3262F] hover:scale-105 py-2"
               onClick={() => setIsMenuOpen(false)}
             >
