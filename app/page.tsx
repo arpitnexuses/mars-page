@@ -19,8 +19,8 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <AboutSection />
-      <LogoCarousel />
       <VideoSection />
+      <LogoCarousel />
       <JobsShowcaseSection />
       <TrustedBySection />
       <ElevateCareerSection />

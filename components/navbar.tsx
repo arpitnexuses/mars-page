@@ -18,9 +18,9 @@ export function Navbar() {
           <Image
             src="/mars-logo.png"
             alt="MARS Solutions Group"
-            width={100}
-            height={40}
-            className="h-auto w-24 transition-all duration-300 group-hover:scale-105 group-hover:brightness-110 group-hover:drop-shadow-md"
+            width={120}
+            height={48}
+            className="h-auto w-28 transition-all duration-300 group-hover:scale-105 group-hover:brightness-110 group-hover:drop-shadow-md"
           />
         </Link>
 

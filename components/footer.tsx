@@ -10,11 +10,13 @@ export function Footer() {
           {/* Left Column - CTA Content */}
           <div className="flex-1 max-w-2xl">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-black mb-3 sm:mb-4 leading-tight" style={{ fontFamily: "Inter, sans-serif" }}>
-              Empowering Your Healthcare Team with Exceptional Talent
+            Empowering Your Team 
+          <br />
+            with Top Talent
             </h2>
-            <p className="text-gray-500 text-base sm:text-lg mb-6 sm:mb-8">Partner with MARS Healthcare Staffing</p>
+            <p className="text-gray-500 text-base sm:text-lg mb-6 sm:mb-8">Partner with MARS TalentFlex</p>
             <button 
-              className="px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-bold uppercase tracking-wide text-white transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto"
+              className="px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-bold uppercase tracking-wide text-white transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto -translate-x-2.5 rounded-md"
               style={{ backgroundColor: "#B71C1C" }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#9A1818"}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#B71C1C"}

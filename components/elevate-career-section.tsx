@@ -14,22 +14,22 @@ export function ElevateCareerSection() {
             {(() => {
               const features = [
                 {
-                  icon: "⏱",
+                  icon: "/career section-logos/time2.png",
                   title: "Reduce Sourcing Time",
                   description: "Cut sourcing time by 40%, from 60% to under 20%.",
                 },
                 {
-                  icon: "💰",
+                  icon: "/career section-logos/cost2.png",
                   title: "Save Costs",
                   description: " Lower cost-to-hire by up to 40% with a flat fee.",
                 },
                 {
-                  icon: "🎯",
+                  icon: "/career section-logos/hire2.png",
                   title: "Hire Quality",
                   description: " Get verified, culture-fit candidates who stay longer.",
                 },
                 {
-                  icon: "🚀",
+                  icon: "/career section-logos/qual2.png",
                   title: "Accelerate Hiring",
                   description: "Receive 5–8 ranked profiles in as low as 72 hours.",
                 },

@@ -108,7 +108,7 @@ export function SplitLayoutSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-bold uppercase tracking-wide text-white transition-all duration-300 hover:scale-105 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-bold uppercase tracking-wide text-white transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto -translate-x-2.5 disabled:opacity-50 disabled:cursor-not-allowed rounded-md"
                   style={{ backgroundColor: "#B3262F" }}
                   onMouseEnter={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = "#9A1F28")}
                   onMouseLeave={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = "#B3262F")}

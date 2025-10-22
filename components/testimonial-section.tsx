@@ -9,7 +9,7 @@ export function TestimonialSection() {
       {/* Background Image */}
       <div className="absolute inset-0 h-[600px]">
         <Image
-          src="/images/testimonial-bg.jpg"
+          src="/images/testimonial-bg.png"
           alt="Diverse professionals in office"
           fill
           className="object-cover"
