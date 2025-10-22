@@ -30,9 +30,9 @@ export function CTASection() {
             <Button
               size="lg"
               className="text-white font-bold px-12 py-6 text-lg uppercase transition-all duration-300 hover:scale-105 hover:shadow-xl"
-              style={{ backgroundColor: "#7CB342" }}
+              style={{ backgroundColor: "#7cb342" }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#689F38"}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#7CB342"}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#7cb342"}
             >
               LEARN MORE
             </Button>

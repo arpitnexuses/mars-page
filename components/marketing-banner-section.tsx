@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import { Star } from "lucide-react"
 
@@ -48,7 +50,7 @@ export function MarketingBannerSection() {
                     <span className="text-sm font-medium text-gray-700">(5.0)</span>
                   </div>
                 </div>
-                <button className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 sm:py-2.5 px-3 sm:px-4 rounded-lg transition-colors text-xs sm:text-sm">
+                <button className="w-full text-white font-semibold py-2 sm:py-2.5 px-3 sm:px-4 rounded-lg transition-colors text-xs sm:text-sm" style={{ backgroundColor: "#7cb342" }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#689F38"} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#7cb342"}>
                   APPLY NOW
                 </button>
               </div>
@@ -62,7 +64,7 @@ export function MarketingBannerSection() {
                     {/* small toggle */}
                     <label className="relative inline-flex h-5 w-10 cursor-pointer items-center">
                       <input type="checkbox" className="peer sr-only" defaultChecked />
-                      <span className="absolute inset-0 rounded-full bg-gray-200 transition-colors peer-checked:bg-emerald-500" />
+                      <span className="absolute inset-0 rounded-full bg-gray-200 transition-colors peer-checked:bg-[#7cb342]" />
                       <span className="absolute left-0.5 top-0.5 h-4 w-4 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5" />
                     </label>
                   </div>
@@ -74,7 +76,7 @@ export function MarketingBannerSection() {
                   <div className="grid grid-cols-3 gap-4 mb-1">
                     <div>
                       <p className="text-[10px] text-gray-500 mb-1">Test Score</p>
-                      <p className="text-[22px] leading-6 font-bold text-emerald-600">94%</p>
+                      <p className="text-[22px] leading-6 font-bold" style={{ color: "#7cb342" }}>94%</p>
                       <p className="text-[10px] text-gray-500">Experience: 3+ years</p>
                     </div>
                     <div className="flex flex-col items-start">
@@ -85,7 +87,7 @@ export function MarketingBannerSection() {
                     </div>
                     <div className="flex flex-col items-start">
                       <p className="text-[10px] text-gray-500 mb-1">Test Score</p>
-                      <div className="flex gap-1">
+                      <div className="flex gap-1 -ml-5 sm:ml-0">
                         {[1,2,3,4,5].map((s)=> (
                           <Star key={s} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
                         ))}

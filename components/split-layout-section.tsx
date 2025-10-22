@@ -119,7 +119,7 @@ export function SplitLayoutSection() {
 
               {/* Status Messages */}
               {submitStatus === 'success' && (
-                <div className="mb-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded text-xs sm:text-sm">
+                <div className="mb-4 p-3 rounded text-xs sm:text-sm" style={{ backgroundColor: "#7cb342", borderColor: "#7cb342", color: "white" }}>
                   ✅ Thank you! Your message has been sent successfully. We'll get back to you soon.
                 </div>
               )}

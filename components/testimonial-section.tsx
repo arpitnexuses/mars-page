@@ -18,7 +18,7 @@ export function TestimonialSection() {
       </div>
 
       {/* Content Card - Positioned on Left */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center py-20 -mt-[90px] sm:mt-0">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center py-20 -mt-[120px] sm:mt-0">
         <div
           className="bg-white rounded-3xl shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#B3262F]/10"
           style={{ maxWidth: "calc(42rem - 30px)", padding: "calc(48px - 15px)", marginLeft: "10px" }}
@@ -42,9 +42,9 @@ export function TestimonialSection() {
           <Button
             size="lg"
             className="text-white text-lg px-8 py-6 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
-            style={{ backgroundColor: "#7CB342" }}
+            style={{ backgroundColor: "#7cb342" }}
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#689F38"}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#7CB342"}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#7cb342"}
           >
             Find diverse talent
           </Button>

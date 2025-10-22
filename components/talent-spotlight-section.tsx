@@ -2,12 +2,12 @@ import Image from "next/image"
 
 export function TalentSpotlightSection() {
   return (
-    <section className="py-20 px-4 sm:px-6 bg-white">
+    <section className="py-0 px-4 sm:px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Left: Static promotional image */}
           <div className="flex justify-center lg:justify-start">
-            <div className="relative w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[520px] aspect-[3/4] group">
+            <div className="relative w-full max-w-[260px] sm:max-w-[380px] lg:max-w-[480px] aspect-[3/4] group">
               <Image
                 src="/images/talent.png"
                 alt="Talent spotlight"
