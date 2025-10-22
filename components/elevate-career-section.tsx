@@ -16,13 +16,13 @@ export function ElevateCareerSection() {
           </div>
 
           {/* Right Column - Profile Cards Image */}
-          <div className="relative flex justify-center md:justify-end mt-8 md:mt-0">
+          <div className="relative flex justify-center md:justify-end mt-8 md:mt-0 group">
             <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-2xl aspect-[16/9]">
               <Image
                 src="/images/profile-cards.png"
                 alt="Professional profiles showcasing HR Director, Sr. Security Engineer, and Sr. Manager Cloud positions"
                 fill
-                className="object-contain"
+                className="object-contain transition-all duration-500 group-hover:scale-110"
               />
             </div>
           </div>

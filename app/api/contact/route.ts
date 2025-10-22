@@ -14,8 +14,23 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Check if environment variables are set
+    if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS || !process.env.FROM_EMAIL || !process.env.TO_EMAIL) {
+      console.error('Missing environment variables:', {
+        SMTP_HOST: !!process.env.SMTP_HOST,
+        SMTP_USER: !!process.env.SMTP_USER,
+        SMTP_PASS: !!process.env.SMTP_PASS,
+        FROM_EMAIL: !!process.env.FROM_EMAIL,
+        TO_EMAIL: !!process.env.TO_EMAIL
+      })
+      return NextResponse.json(
+        { error: 'Email configuration is missing. Please check environment variables.' },
+        { status: 500 }
+      )
+    }
+
     // Create transporter
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: parseInt(process.env.SMTP_PORT || '587'),
       secure: process.env.SMTP_SECURE === 'true',

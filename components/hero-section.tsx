@@ -6,7 +6,7 @@ import Image from "next/image"
 export function HeroSection() {
   return (
     <section className="relative min-h-[calc(100vh-73px)] w-full overflow-hidden bg-gradient-to-br from-[#f5f0eb] via-[#ede8f0] to-[#e8e5f5]">
-      <div className="mx-auto flex flex-col lg:flex-row max-w-7xl items-center px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="mx-auto flex flex-col lg:flex-row max-w-7xl items-center px-4 sm:px-6 lg:pl-8 lg:pr-0 py-12 lg:py-20">
         {/* Left Column - Content */}
         <div className="max-w-3xl flex-1 pr-0 lg:pr-8 mb-8 lg:mb-0">
           {/* Main Heading */}
@@ -45,13 +45,14 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative flex-1 lg:flex lg:justify-end mt-8 lg:mt-0">
-          <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full">
+        <div className="relative w-full lg:flex-1 flex justify-center lg:flex lg:justify-end mt-6 lg:mt-0 lg:-ml-28 lg:mr-0">
+          <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] w-full max-w-md lg:max-w-none lg:w-[130%] group">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cards%201-t1TXdzAi7istOGfY1icgWQT0RhMQUV.png"
+              src="/images/candidate-cards.png"
               alt="Candidate profile cards showing diverse returners"
-              fill
-              className="object-contain object-right"
+              width={400}
+              height={300}
+              className="object-contain object-center lg:object-right w-full h-full transition-all duration-500 group-hover:scale-90"
               priority
             />
           </div>
