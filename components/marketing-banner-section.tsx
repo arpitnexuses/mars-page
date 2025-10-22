@@ -11,19 +11,17 @@ export function MarketingBannerSection() {
           {/* Left Content */}
           <div className="flex-1 max-w-xl">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-4 sm:mb-6 leading-tight" style={{ fontFamily: "Inter, sans-serif" }}>
-              Align with MARS   
+              It’s Time to Shift,   
               <br />
-              Returnship for ESG 
-              <br />
-              Excellence:
+              Not Sift 
             </h2>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              Joining forces with MARS Returnship not only enhances
+              Stop spending hours sifting through endless resumes.
               <br />
-              your talent acquisition strategy but also aligns with your 
+              Focus on selling your brand vision to culture-fit candidates who
               <br />
-              ESG objectives.
-            </p>
+              align with your goals.
+             </p>
           </div>
 
           {/* Right Image with Floating Cards */}

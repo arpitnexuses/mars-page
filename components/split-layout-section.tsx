@@ -56,11 +56,11 @@ export function SplitLayoutSection() {
           <div className="w-full lg:w-1/2">
             <div className="max-w-md">
               {/* Label */}
-              <p className="font-black text-lg sm:text-xl tracking-wider mb-1" style={{ color: "#B3262F" }}>CUSTOM, SCALABLE, TECH-ENABLED</p>
+              <p className="font-black text-lg sm:text-xl tracking-wider mb-1" style={{ color: "#B3262F" }}>CUSTOM, SMART, SCALABLE</p>
 
               {/* Heading */}
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-6 sm:mb-8 leading-tight" style={{ fontFamily: "Inter, sans-serif" }}>
-                <span className="font-bold">Hire skilled nursing and allied health</span> <span>professionals</span> on demand.
+                <span className="font-bold"> Hire verified, top-tier</span> <span>Candidates</span> on demand.
               </h2>
 
               {/* Form */}
@@ -129,13 +129,6 @@ export function SplitLayoutSection() {
                 </div>
               )}
 
-              {/* Footer Text */}
-              <p className="text-xs sm:text-sm text-gray-600">
-                Know someone who&apos;s looking for a job?{" "}
-                <a href="#" className="text-black font-semibold underline" style={{ "--hover-color": "#B3262F" } as React.CSSProperties}>
-                  Refer here
-                </a>
-              </p>
             </div>
           </div>
 

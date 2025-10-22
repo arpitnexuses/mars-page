@@ -20,11 +20,11 @@ export function CTASection() {
       <div className="relative z-10 mx-auto flex max-w-7xl items-center justify-end px-6 pr-16 lg:px-8 lg:pr-20 py-20">
         <div className="max-w-2xl text-right text-white">
           <h2 className="mb-8 text-4xl font-bold text-white leading-tight">
-            <span className="font-bold">BUILD HIGH 
+            <span className="font-bold">Cut Through the
               <br />
-              PERFORMING</span>
+              Noise.</span>
             <br />
-            <span className="font-light">Diverse Tech Team</span>
+            <span className="font-light">Find the Right Talent.</span>
           </h2>
           <div className="flex justify-end">
             <Button
@@ -34,7 +34,7 @@ export function CTASection() {
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#689F38"}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#7cb342"}
             >
-              LEARN MORE
+              Book a Consultation
             </Button>
           </div>
         </div>

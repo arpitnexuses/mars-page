@@ -25,17 +25,17 @@ export function TestimonialSection() {
         >
           {/* Heading */}
           <h2 className="text-4xl font-normal text-gray-900 leading-tight mb-6" style={{ fontFamily: "Inter, sans-serif" }}>
-            Making Your Workplace 
+          Empower Your Talent Acquisition 
             <br />
-            Reflective of the <span className="font-bold">World 
+            Team with the <span className="font-bold">World 
               <br />
-              Around You.</span>
+              Right Tools</span>
           </h2>
 
           {/* Body Text */}
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            Embrace experienced professionals and build a diverse, perspective-driven workforce that benefits your
-            organization.
+          TalentFlex helps your recruiters do what they do bes; build relationships, engage talent, and close offers while we take care of 
+          sourcing.
           </p>
 
           {/* CTA Button */}
@@ -46,7 +46,7 @@ export function TestimonialSection() {
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#689F38"}
             onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#7cb342"}
           >
-            Find diverse talent
+            Schedule a Demo
           </Button>
         </div>
       </div>
