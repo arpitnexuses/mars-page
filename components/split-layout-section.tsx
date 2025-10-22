@@ -49,7 +49,7 @@ export function SplitLayoutSection() {
     }
   }
   return (
-    <section className="py-20 bg-white">
+    <section id="contact-form" className="py-16 bg-white">
       <div className="container mx-auto pr-2 pl-4 sm:pr-4 sm:pl-8 md:pl-12 lg:pl-16">
         <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
           {/* Left Side - Form */}
@@ -108,7 +108,7 @@ export function SplitLayoutSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full text-white font-semibold py-2.5 sm:py-3 px-4 sm:px-6 rounded transition-all duration-300 hover:scale-105 hover:shadow-lg text-xs sm:text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-bold uppercase tracking-wide text-white transition-all duration-300 hover:scale-105 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                   style={{ backgroundColor: "#B3262F" }}
                   onMouseEnter={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = "#9A1F28")}
                   onMouseLeave={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = "#B3262F")}
@@ -124,7 +124,7 @@ export function SplitLayoutSection() {
                 </div>
               )}
               {submitStatus === 'error' && (
-                <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded text-xs sm:text-sm">
+                <div className="mb-4 p-3 rounded text-xs sm:text-sm" style={{ backgroundColor: "#B3262F", borderColor: "#B3262F", color: "white" }}>
                   ❌ Sorry, there was an error sending your message. Please try again.
                 </div>
               )}

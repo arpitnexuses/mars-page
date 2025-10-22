@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export function TestimonialSection() {
   return (
-    <section className="relative w-full overflow-hidden py-20">
+    <section className="relative w-full overflow-hidden py-16">
       {/* Background Image */}
       <div className="absolute inset-0 h-[600px]">
         <Image
@@ -41,7 +41,7 @@ export function TestimonialSection() {
           {/* CTA Button */}
           <Button
             size="lg"
-            className="text-white text-lg px-8 py-6 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            className="px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-bold uppercase tracking-wide text-white transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto"
             style={{ backgroundColor: "#7cb342" }}
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#689F38"}
             onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#7cb342"}

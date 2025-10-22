@@ -5,14 +5,13 @@ import { Star } from "lucide-react"
 
 export function MarketingBannerSection() {
   return (
-    <section className="py-20" style={{ backgroundColor: "#f8f5f5" }}>
+    <section className="py-16" style={{ backgroundColor: "#f8f5f5" }}>
       <div className="container mx-auto pr-2 pl-4 sm:pr-4 sm:pl-8 md:pl-12 lg:pl-16">
         <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
           {/* Left Content */}
           <div className="flex-1 max-w-xl">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-4 sm:mb-6 leading-tight" style={{ fontFamily: "Inter, sans-serif" }}>
               It’s Time to Shift,   
-              <br />
               Not Sift 
             </h2>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">

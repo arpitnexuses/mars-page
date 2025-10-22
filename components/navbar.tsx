@@ -54,7 +54,7 @@ export function Navbar() {
 
           {/* CTA Button */}
           <Button 
-            className="px-6 py-2 text-base font-semibold text-white rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg" 
+            className="px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-bold uppercase tracking-wide text-white transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto" 
             size="lg" 
             style={{ backgroundColor: "#B3262F" }}
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#9A1F28"}

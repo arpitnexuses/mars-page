@@ -2,12 +2,13 @@ import Image from "next/image"
 
 export function ElevateCareerSection() {
   return (
-    <section className="py-20" style={{ backgroundColor: "#f8f5f5" }}>
+    <section className="py-16" style={{ backgroundColor: "#f8f5f5" }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-16">
         <div className="grid md:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-4 sm:space-y-6">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 leading-tight" style={{ fontFamily: "Inter, sans-serif" }}>Forward-Thinking Companies Invest in Efficient Hiring Strategies, Cutting Through the AI Clutter to Interview Only the Best.
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 leading-tight" style={{ fontFamily: "Inter, sans-serif" }}>Supercharge Your Hiring Process with MARS TalentFlex.
+
             </h2>
             {/* Features Grid (Editable) */}
             {(() => {

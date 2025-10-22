@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export function CTASection() {
   return (
-    <section className="relative w-full overflow-hidden py-20">
+    <section className="relative w-full overflow-hidden py-16">
       {/* Background Image */}
       <Image
         src="/images/cta-background.png"
@@ -29,10 +29,16 @@ export function CTASection() {
           <div className="flex justify-end">
             <Button
               size="lg"
-              className="text-white font-bold px-12 py-6 text-lg uppercase transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-bold uppercase tracking-wide text-white transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto"
               style={{ backgroundColor: "#7cb342" }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#689F38"}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#7cb342"}
+              onClick={() => {
+                const formSection = document.getElementById('contact-form');
+                if (formSection) {
+                  formSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               Book a Consultation
             </Button>

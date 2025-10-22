@@ -1,6 +1,6 @@
 export function AboutSection() {
   return (
-    <section className="py-20 px-4 sm:px-6">
+    <section className="py-16 px-4 sm:px-6">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-6 sm:mb-8 leading-tight" style={{ fontFamily: "Inter, sans-serif" }}>
           <span className="text-[#B83A3A] font-normal">The Ideal Partner for </span>
@@ -8,7 +8,7 @@ export function AboutSection() {
           <span className="text-[#B83A3A] font-normal"> Across Industries</span>
         </h2>
         <p className="text-center text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed px-2">
-        In a market where every role attracts thousands of AI-optimized resumes within hours, MARS <span className="font-bold">TalentFlex</span> 
+        In a market where every role attracts thousands of AI-optimized resumes within hours, MARS <span className="font-bold">TalentFlex </span> 
         helps you reclaim your recruiters’ time and sharpen your hiring edge.
         <br />
         <br />

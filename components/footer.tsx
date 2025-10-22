@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="bg-gray-50 py-20 px-4 sm:px-6">
+    <footer className="bg-gray-50 py-16 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8 sm:gap-12">
           {/* Left Column - CTA Content */}
@@ -14,7 +14,7 @@ export function Footer() {
             </h2>
             <p className="text-gray-500 text-base sm:text-lg mb-6 sm:mb-8">Partner with MARS Healthcare Staffing</p>
             <button 
-              className="text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg uppercase text-xs sm:text-sm tracking-wide"
+              className="px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-bold uppercase tracking-wide text-white transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto"
               style={{ backgroundColor: "#B71C1C" }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#9A1818"}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#B71C1C"}

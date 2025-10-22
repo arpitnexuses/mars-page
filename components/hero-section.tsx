@@ -10,12 +10,12 @@ export function HeroSection() {
         {/* Left Column - Content */}
         <div className="max-w-3xl flex-1 pr-0 lg:pr-8 mb-8 lg:mb-0">
           {/* Main Heading */}
-          <h1 className="mb-6 sm:mb-8 text-balance font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight tracking-tight">
+            <h1 className="mb-6 sm:mb-8 text-balance font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight tracking-tight">
             <span className="text-gray-900 whitespace-nowrap">Cut through the AI 
-              <br />
-              noise. Find real talent,</span>
+              
+              noise. </span>
             <br />
-            <span className="text-[#7cb342]">faster.</span>
+            <span className="text-[#B3262F]">Find real talent, faster.</span>
           </h1>
 
           {/* Description */}
@@ -39,13 +39,13 @@ export function HeroSection() {
         </div>
 
         <div className="relative w-full lg:flex-1 flex justify-center lg:flex lg:justify-end mt-6 lg:mt-0 lg:-ml-28 lg:mr-0">
-          <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] w-full max-w-md lg:max-w-none lg:w-[130%] group">
+          <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] w-full max-w-md lg:max-w-none lg:w-[130%]">
             <Image
               src="/images/candidate-cards.png"
               alt="Candidate profile cards showing diverse returners"
               width={400}
               height={300}
-              className="object-contain object-center lg:object-right w-full h-full transition-all duration-500 group-hover:scale-90"
+              className="object-contain object-center lg:object-right w-full h-full"
               priority
             />
           </div>
