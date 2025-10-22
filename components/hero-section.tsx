@@ -6,31 +6,24 @@ import Image from "next/image"
 export function HeroSection() {
   return (
     <section className="relative min-h-[calc(100vh-73px)] w-full overflow-hidden bg-gradient-to-br from-[#f5f0eb] via-[#ede8f0] to-[#e8e5f5]">
-      <div className="mx-auto flex flex-col lg:flex-row max-w-7xl items-center px-4 sm:px-6 lg:pl-8 lg:pr-0 py-12 lg:py-20">
+      <div className="mx-auto flex flex-col lg:flex-row max-w-7xl items-center px-6 lg:px-8 py-16 lg:py-20">
         {/* Left Column - Content */}
-        <div className="max-w-3xl flex-1 pr-0 lg:pr-8 mb-8 lg:mb-0">
+        <div className="max-w-3xl flex-1 lg:pr-12 mb-12 lg:mb-0">
           {/* Main Heading */}
-            <h1 className="mb-6 sm:mb-8 text-balance font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight tracking-tight">
-            <span className="text-gray-900 whitespace-nowrap">Cut through the AI 
-              
-              noise. </span>
+          <h1 className="mb-8 text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-gray-900">
+            <span className="text-gray-900">Cut through the AI noise.</span>
             <br />
             <span className="text-[#B3262F]">Find real talent, faster.</span>
           </h1>
 
           {/* Description */}
-          <p className="mb-8 sm:mb-10 max-w-2xl text-pretty text-base sm:text-lg lg:text-xl leading-relaxed text-gray-600">
-          MARS TalentFlex is a subscription-based sourcing engine that helps you rise above AI-generated clutter.
-           We merge technology and human insight to deliver verified,
-            ranked candidates—so your team can focus on what truly matters: engaging and hiring the best
+          <p className="mb-10 max-w-2xl text-lg lg:text-xl leading-relaxed text-gray-600">
+            MARS TalentFlex is a subscription-based sourcing engine that helps you rise above AI-generated clutter. We merge technology and human insight to deliver verified, ranked candidates—so your team can focus on what truly matters: engaging and hiring the best.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Button
-              className="px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-bold uppercase tracking-wide text-white transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto -translate-x-2.5"
-              style={{ backgroundColor: "#B3262F" }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#9A1F28"}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#B3262F"}
+              className="px-8 py-6 text-base font-semibold uppercase tracking-wide text-white bg-[#B3262F] hover:bg-[#9A1F28] transition-colors duration-200 rounded-md"
               size="lg"
             >
               Learn How It Works
@@ -38,13 +31,13 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative w-full lg:flex-1 flex justify-center lg:flex lg:justify-end mt-6 lg:mt-0 lg:-ml-28 lg:mr-0">
-          <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] w-full max-w-md lg:max-w-none lg:w-[130%]">
+        <div className="relative w-full lg:flex-1 flex justify-center lg:justify-end">
+          <div className="relative h-[300px] sm:h-[400px] lg:h-[600px] w-full max-w-md lg:max-w-2xl">
             <Image
               src="/images/candidate-cards.png"
               alt="Candidate profile cards showing diverse returners"
-              width={400}
-              height={300}
+              width={800}
+              height={600}
               className="object-contain object-center lg:object-right w-full h-full"
               priority
             />

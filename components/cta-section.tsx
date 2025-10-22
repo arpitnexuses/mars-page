@@ -5,34 +5,29 @@ import { Button } from "@/components/ui/button"
 
 export function CTASection() {
   return (
-    <section className="relative w-full overflow-hidden py-16">
+    <section className="relative w-full overflow-hidden py-20">
       {/* Background Image */}
       <Image
         src="/images/cta-background.png"
         alt="Professional team meeting"
         width={1920}
         height={500}
-        className="absolute inset-0 w-full h-[500px] object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
         priority={false}
       />
 
       {/* Content Container */}
-      <div className="relative z-10 mx-auto flex max-w-7xl items-center justify-end px-6 pr-16 lg:px-8 lg:pr-20 py-20">
+      <div className="relative z-10 mx-auto flex max-w-7xl items-center justify-end px-6 lg:px-8 py-20">
         <div className="max-w-2xl text-right text-white">
-          <h2 className="mb-8 text-5xl font-bold text-white leading-tight">
-            <span className="font-bold">Rise Above the 
-              
-              Noise,</span>
+          <h2 className="mb-8 text-4xl lg:text-5xl font-bold text-white leading-tight">
+            Rise Above the Noise,
             <br />
-            <span className="font-light">Find the Right Talent.</span>
+            Find the Right Talent.
           </h2>
           <div className="flex justify-end">
             <Button
               size="lg"
-              className="px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-bold uppercase tracking-wide text-white transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto"
-              style={{ backgroundColor: "#7cb342" }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#689F38"}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#7cb342"}
+              className="px-8 py-6 text-base font-semibold uppercase tracking-wide text-white bg-[#B3262F] hover:bg-[#9A1F28] transition-colors duration-200 rounded-md"
               onClick={() => {
                 const formSection = document.getElementById('contact-form');
                 if (formSection) {

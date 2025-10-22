@@ -124,6 +124,28 @@
   }
 }
 
+/* Brand Design System */
+:root {
+  /* Brand Colors */
+  --brand-primary: #B3262F;
+  --brand-primary-hover: #9A1F28;
+  --brand-text-primary: #1F2937;
+  --brand-text-secondary: #4B5563;
+  --brand-text-muted: #6B7280;
+
+  /* Typography Scale */
+  --text-h1: 3rem; /* 48px */
+  --text-h2: 2.25rem; /* 36px */
+  --text-h3: 1.5rem; /* 24px */
+  --text-body-lg: 1.125rem; /* 18px */
+  --text-body: 1rem; /* 16px */
+
+  /* Spacing Scale */
+  --section-padding-y: 5rem; /* 80px */
+  --container-padding-x: 1.5rem; /* 24px */
+  --content-gap: 2rem; /* 32px */
+}
+
 /* Truly continuous infinite scroll - no reset ever */
 @keyframes scroll {
   0% {
