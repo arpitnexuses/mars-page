@@ -49,18 +49,18 @@ export function SplitLayoutSection() {
     }
   }
   return (
-    <section id="contact-form" className="py-16 bg-white">
-      <div className="container mx-auto pr-2 pl-4 sm:pr-4 sm:pl-8 md:pl-12 lg:pl-16">
-        <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
+    <section id="contact-form" className="py-20 bg-white">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Left Side - Form */}
           <div className="w-full lg:w-1/2">
             <div className="max-w-md">
               {/* Label */}
-              <p className="font-black text-lg sm:text-xl tracking-wider mb-1" style={{ color: "#B3262F" }}>CUSTOM, SMART, SCALABLE</p>
+              <p className="font-bold text-lg tracking-wider mb-2 text-[#B3262F]">CUSTOM, SMART, SCALABLE</p>
 
               {/* Heading */}
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-6 sm:mb-8 leading-tight" style={{ fontFamily: "Inter, sans-serif" }}>
-                <span className="font-bold"> Hire verified, top-tier</span> <span>Candidates</span> on demand.
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8 leading-tight">
+                Hire verified, top-tier Candidates on demand.
               </h2>
 
               {/* Form */}
@@ -108,10 +108,7 @@ export function SplitLayoutSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-bold uppercase tracking-wide text-white transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto -translate-x-2.5 disabled:opacity-50 disabled:cursor-not-allowed rounded-md"
-                  style={{ backgroundColor: "#B3262F" }}
-                  onMouseEnter={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = "#9A1F28")}
-                  onMouseLeave={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = "#B3262F")}
+                  className="w-full px-8 py-6 text-base font-semibold uppercase tracking-wide text-white bg-[#B3262F] hover:bg-[#9A1F28] transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed rounded-md"
                 >
                   {isSubmitting ? 'SENDING...' : 'REQUEST A CALL BACK'}
                 </button>
@@ -119,12 +116,12 @@ export function SplitLayoutSection() {
 
               {/* Status Messages */}
               {submitStatus === 'success' && (
-                <div className="mb-4 p-3 rounded text-xs sm:text-sm" style={{ backgroundColor: "#7cb342", borderColor: "#7cb342", color: "white" }}>
+                <div className="mb-4 p-3 rounded text-sm bg-[#B3262F] text-white">
                   ✅ Thank you! Your message has been sent successfully. We'll get back to you soon.
                 </div>
               )}
               {submitStatus === 'error' && (
-                <div className="mb-4 p-3 rounded text-xs sm:text-sm" style={{ backgroundColor: "#B3262F", borderColor: "#B3262F", color: "white" }}>
+                <div className="mb-4 p-3 rounded text-sm bg-[#B3262F] text-white">
                   ❌ Sorry, there was an error sending your message. Please try again.
                 </div>
               )}
@@ -134,13 +131,13 @@ export function SplitLayoutSection() {
 
           {/* Right Side - Single illustrative image */}
           <div className="w-full lg:w-1/2 relative">
-            <div className="relative h-[300px] sm:h-[400px] lg:h-[600px] group">
+            <div className="relative h-[400px] lg:h-[600px]">
               <Image
                 src="/images/split-layout.png"
                 alt="Hiring illustration"
                 fill
                 sizes="(max-width: 1024px) 90vw, 600px"
-                className="object-contain transition-all duration-300 group-hover:scale-105 group-hover:brightness-110"
+                className="object-contain"
                 priority
               />
             </div>

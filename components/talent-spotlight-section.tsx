@@ -2,10 +2,10 @@ import Image from "next/image"
 
 export function TalentSpotlightSection() {
   return (
-    <section className="py-16 px-4 sm:px-6 bg-white">
+    <section className="py-20 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Main Heading */}
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-center mb-12 sm:mb-16 leading-tight" style={{ fontFamily: "Inter, sans-serif", color: "#B3262F" }}>
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16 leading-tight text-[#B3262F]">
           From Job Intake to Candidate Shortlist — All in Days, Not Weeks
         </h2>
 

@@ -11,31 +11,31 @@ export function Navbar() {
 
   return (
     <nav className="w-full bg-gradient-to-br from-[#f5f0eb] via-[#ede8f0] to-[#e8e5f5]">
-      <div className="mx-auto flex max-w-7xl items-center px-8 py-6 lg:px-12">
+      <div className="mx-auto flex max-w-7xl items-center px-6 py-6 lg:px-8">
         {/* Logo and Navigation Links */}
-        <div className="flex items-center gap-[100px]">
-        <Link href="/" className="flex items-center group">
-          <Image
-            src="/images/mars-logo.png"
-            alt="MARS Solutions Group"
-            width={130}
-            height={52}
-            className="h-auto w-30 transition-all duration-300 group-hover:scale-105 group-hover:brightness-110 group-hover:drop-shadow-md"
-          />
-        </Link>
+        <div className="flex items-center gap-12 lg:gap-20">
+          <Link href="/" className="flex items-center flex-shrink-0">
+            <Image
+              src="/images/mars-logo.png"
+              alt="MARS Solutions Group"
+              width={130}
+              height={52}
+              className="h-auto w-[130px]"
+            />
+          </Link>
 
           {/* Navigation Links */}
           <div className="hidden items-center gap-8 md:flex">
-            <Link href="/employers" className="text-base font-medium text-gray-700 transition-all duration-300 hover:text-[#B3262F] hover:scale-105">
+            <Link href="/employers" className="text-base font-medium text-gray-700 transition-colors duration-200 hover:text-[#B3262F]">
               Employers
             </Link>
-            <Link href="/returners" className="text-base font-medium text-gray-700 transition-all duration-300 hover:text-[#B3262F] hover:scale-105">
+            <Link href="/returners" className="text-base font-medium text-gray-700 transition-colors duration-200 hover:text-[#B3262F]">
               Returners
             </Link>
-            <Link href="/volunteer" className="text-base font-medium text-gray-700 transition-all duration-300 hover:text-[#B3262F] hover:scale-105">
+            <Link href="/volunteer" className="text-base font-medium text-gray-700 transition-colors duration-200 hover:text-[#B3262F]">
               Volunteer
             </Link>
-            <Link href="https://marssg.com/about-2/" target="_blank" rel="noopener noreferrer" className="text-base font-medium text-gray-700 transition-all duration-300 hover:text-[#B3262F] hover:scale-105">
+            <Link href="https://marssg.com/about-2/" target="_blank" rel="noopener noreferrer" className="text-base font-medium text-gray-700 transition-colors duration-200 hover:text-[#B3262F]">
               About us
             </Link>
           </div>
@@ -45,7 +45,7 @@ export function Navbar() {
         <div className="ml-auto flex items-center gap-4">
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-[#B3262F] hover:bg-white/20 transition-all duration-300"
+            className="md:hidden p-2 rounded-md text-gray-700 hover:text-[#B3262F] transition-colors duration-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -53,12 +53,9 @@ export function Navbar() {
           </button>
 
           {/* CTA Button */}
-          <Button 
-            className="px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-bold uppercase tracking-wide text-white transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto" 
-            size="lg" 
-            style={{ backgroundColor: "#B3262F" }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#9A1F28"}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#B3262F"}
+          <Button
+            className="hidden md:inline-flex px-8 py-6 text-base font-semibold uppercase tracking-wide text-white bg-[#B3262F] hover:bg-[#9A1F28] transition-colors duration-200 rounded-md"
+            size="lg"
           >
             Learn More
           </Button>
@@ -68,33 +65,33 @@ export function Navbar() {
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200 shadow-lg">
-          <div className="px-8 py-6 space-y-4">
-            <Link 
-              href="/employers" 
-              className="block text-base font-medium text-gray-700 transition-all duration-300 hover:text-[#B3262F] hover:scale-105 py-2"
+          <div className="px-6 py-6 space-y-4">
+            <Link
+              href="/employers"
+              className="block text-base font-medium text-gray-700 transition-colors duration-200 hover:text-[#B3262F] py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Employers
             </Link>
-            <Link 
-              href="/returners" 
-              className="block text-base font-medium text-gray-700 transition-all duration-300 hover:text-[#B3262F] hover:scale-105 py-2"
+            <Link
+              href="/returners"
+              className="block text-base font-medium text-gray-700 transition-colors duration-200 hover:text-[#B3262F] py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Returners
             </Link>
-            <Link 
-              href="/volunteer" 
-              className="block text-base font-medium text-gray-700 transition-all duration-300 hover:text-[#B3262F] hover:scale-105 py-2"
+            <Link
+              href="/volunteer"
+              className="block text-base font-medium text-gray-700 transition-colors duration-200 hover:text-[#B3262F] py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Volunteer
             </Link>
-            <Link 
-              href="https://marssg.com/about-2/" 
-              target="_blank" 
+            <Link
+              href="https://marssg.com/about-2/"
+              target="_blank"
               rel="noopener noreferrer"
-              className="block text-base font-medium text-gray-700 transition-all duration-300 hover:text-[#B3262F] hover:scale-105 py-2"
+              className="block text-base font-medium text-gray-700 transition-colors duration-200 hover:text-[#B3262F] py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               About us

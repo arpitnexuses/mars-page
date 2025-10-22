@@ -53,40 +53,40 @@ export function LogoCarousel() {
   ]
 
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-20 bg-white overflow-hidden">
       <div className="relative">
         {/* Gradient overlays for fade effect */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 lg:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 lg:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
         {/* Scrolling container */}
-        <div 
-          ref={scrollRef} 
+        <div
+          ref={scrollRef}
           className="flex"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* First set of logos */}
           {logos.map((logo, index) => (
-            <div key={`logo-${index}`} className="flex items-center justify-center h-12 sm:h-14 lg:h-16 w-32 sm:w-36 lg:w-40 shrink-0 mx-4 sm:mx-6 lg:mx-8 group">
+            <div key={`logo-${index}`} className="flex items-center justify-center h-16 w-40 shrink-0 mx-8">
               <Image
                 src={logo.src}
                 alt={logo.name}
                 width={160}
                 height={64}
-                className="max-h-12 sm:max-h-14 lg:max-h-16 w-auto object-contain transition-all duration-300 group-hover:scale-110 group-hover:brightness-110 group-hover:drop-shadow-lg"
+                className="max-h-16 w-auto object-contain"
               />
             </div>
           ))}
           {/* Duplicate set for seamless loop */}
           {logos.map((logo, index) => (
-            <div key={`logo-dup-${index}`} className="flex items-center justify-center h-12 sm:h-14 lg:h-16 w-32 sm:w-36 lg:w-40 shrink-0 mx-4 sm:mx-6 lg:mx-8 group">
+            <div key={`logo-dup-${index}`} className="flex items-center justify-center h-16 w-40 shrink-0 mx-8">
               <Image
                 src={logo.src}
                 alt={logo.name}
                 width={160}
                 height={64}
-                className="max-h-12 sm:max-h-14 lg:max-h-16 w-auto object-contain transition-all duration-300 group-hover:scale-110 group-hover:brightness-110 group-hover:drop-shadow-lg"
+                className="max-h-16 w-auto object-contain"
               />
             </div>
           ))}

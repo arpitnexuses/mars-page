@@ -5,22 +5,17 @@ import { Star } from "lucide-react"
 
 export function MarketingBannerSection() {
   return (
-    <section className="py-16" style={{ backgroundColor: "#f8f5f5" }}>
-      <div className="container mx-auto pr-2 pl-4 sm:pr-4 sm:pl-8 md:pl-12 lg:pl-16">
-        <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
+    <section className="py-20" style={{ backgroundColor: "#f8f5f5" }}>
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Left Content */}
           <div className="flex-1 max-w-xl">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-4 sm:mb-6 leading-tight" style={{ fontFamily: "Inter, sans-serif" }}>
-              It’s Time to Shift,   
-              Not Sift 
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+              It's Time to Shift, Not Sift
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              Stop spending hours sifting through endless resumes.
-              <br />
-              Focus on selling your brand vision to culture-fit candidates who
-              <br />
-              align with your goals.
-             </p>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Stop spending hours sifting through endless resumes. Focus on selling your brand vision to culture-fit candidates who align with your goals.
+            </p>
           </div>
 
           {/* Right Image with Floating Cards */}
@@ -32,11 +27,11 @@ export function MarketingBannerSection() {
                 alt="Professional woman"
                 width={310}
                 height={310}
-                className="relative z-10 ml-[15px] sm:ml-[25px] lg:ml-[35px] transition-all duration-300 hover:scale-105 hover:brightness-110"
+                className="relative z-10"
               />
 
               {/* APPLE Job Card - Top Right */}
-              <div className="absolute top-3 sm:top-6 right-[25px] sm:right-[50px] bg-white rounded-lg shadow-lg p-3 sm:p-4 w-48 sm:w-56 z-20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#B3262F]/10">
+              <div className="absolute top-6 right-12 bg-white rounded-lg shadow-lg p-4 w-56 z-20">
                 <div className="flex items-start justify-between mb-3">
                   <div>
                     <h3 className="text-lg sm:text-2xl font-bold text-gray-900">APPLE</h3>
@@ -47,13 +42,13 @@ export function MarketingBannerSection() {
                     <span className="text-sm font-medium text-gray-700">(5.0)</span>
                   </div>
                 </div>
-                <button className="w-full text-white font-semibold py-2 sm:py-2.5 px-3 sm:px-4 rounded-lg transition-colors text-xs sm:text-sm" style={{ backgroundColor: "#7cb342" }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#689F38"} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#7cb342"}>
+                <button className="w-full text-white font-semibold py-2.5 px-4 rounded-lg bg-[#B3262F] hover:bg-[#9A1F28] transition-colors duration-200 text-sm">
                   APPLY NOW
                 </button>
               </div>
 
               {/* Candidate Card - Bottom Left (refined to match design) */}
-              <div className="absolute bottom-3 sm:bottom-6 left-2 sm:left-[-120px] lg:left-[-190px] z-20 w-[250px] sm:w-[280px] lg:w-[323px] rounded-[12px] bg-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#B3262F]/10" >
+              <div className="absolute bottom-6 left-2 lg:left-[-190px] z-20 w-[280px] lg:w-[323px] rounded-xl bg-white shadow-lg">
                 <div className="p-2 pb-1">
                   {/* Header row */}
                   <div className="flex items-center justify-between">
